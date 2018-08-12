@@ -11,6 +11,9 @@
 	<p>{{employee.gender}}</p>
 	<p>{{employee.contact}}</p>
 	<p>{{employee.address}}</p>
-	
+
+<a type="button"  href = "{% url 'employee-update' employee.id %}">Update</a>
+<br>
+<a type="button" href = "{% url 'employee-delete' employee.id %}">Delete</button>	
 </body>
 </html>

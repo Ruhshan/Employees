@@ -27,3 +27,14 @@ class Employee(models.Model):
 
 	def __str__(self):
 		return self.first_name
+
+class Managers(models.Model):
+	first_name = models.CharField(max_length=30)
+	middle_name = models.CharField(max_length=30, blank=True, null=True)
+	last_name = models.CharField(max_length=30)
+
+	address = models.TextField(null=True, blank=True)
+	contact = models.CharField(null=True, blank=True, max_length=20)
+
+	def __str__(self):
+		return self.first_name
