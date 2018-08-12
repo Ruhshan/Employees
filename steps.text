@@ -1,0 +1,58 @@
+# create virtualenv
+
+virtualenv venv
+
+# activate 
+venv\Scripts\activate
+
+# install django
+pip install django
+
+# setup project
+django-admin startproject myproject
+cd myproject
+python manage.py makemigrations
+python manage.py migrate
+
+# create super user
+python manage.py createsuperuser
+
+# run
+python manage.py runserver
+
+
+
+
+--------------------------------------------------------------------------
+
+
+
+
+# create app
+python manage.py startapp employee
+
+# add employee in INSTALLED_APP (settings.py)
+
+
+# open employee/models.py
+# add models
+Department
+Employee
+# open employee/admin.py
+# register models
+admin.site.register(Department)
+admin.site.register(Employee)
+
+
+# runserver
+python manage.py runserver
+
+
+
+
+
+
+
+
+
+
