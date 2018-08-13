@@ -40,7 +40,8 @@ def employee_update(request, pk):
 		form = EmployeeForm(instance = employee)
 		return render(request, 'employeeform.html', {'form':form})
 	if request.method == 'POST':
-		form = EmployeeForm(request.POST)
+		employee = Employee.objects.get(id=pk)
+		form = EmployeeForm(request.POST, instance=employee)
 		if form.is_valid():
 			form.save()
 			return redirect('employee-list')
